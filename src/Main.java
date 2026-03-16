@@ -1,7 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        for (int i = 1; i <= 5; i++) {
-            System.out.println(i);
+        public static int linearSearch(int[] arr, int target) {
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] == target) {
+                    return i;
+                }
+            }
+            return -1;
         }
 
     }

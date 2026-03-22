@@ -1,33 +1,32 @@
 package homeworks;
 
 public class Main {
+    public static void main(String[] args) {
+        taskSwitchDay();
+        taskLinearSearch();
+        taskForLoop();
+    }
 
-        public static void main(String[] args) {
+    public static void taskSwitchDay() {
+        String day = "Monday";
 
-            String day = "Monday";
+        switch (day) {
+            case "Monday":
+            case "Tuesday":
+            case "Wednesday":
+            case "Thursday":
+            case "Friday":
+                System.out.println("Робочий день");
+                break;
 
-            switch (day) {
-                case "Monday":
-                case "Tuesday":
-                case "Wednesday":
-                case "Thursday":
-                case "Friday":
-                    System.out.println("Робочий день");
-                    break;
-
-                case "Saturday":
-                case "Sunday":
-                    System.out.println("Вихідний день");
-                    break;
-            }
+            case "Saturday":
+            case "Sunday":
+                System.out.println("Вихідний день");
+                break;
         }
     }
-}
 
-public class Main {
-
-    public static void main(String[] args) {
-
+    public static void taskLinearSearch() {
         int[] arr = {1, 3, 5, 7, 9};
         int result = linearSearch(arr, 7);
 
@@ -42,16 +41,10 @@ public class Main {
         }
         return -1;
     }
-}
-package homeworks;
 
-public class Main {
-
-    public static void main(String[] args) {
-
+    public static void taskForLoop() {
         for (int i = 1; i <= 5; i++) {
             System.out.println(i);
         }
-
     }
 }

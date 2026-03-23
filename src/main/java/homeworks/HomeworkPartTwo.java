@@ -1,31 +1,13 @@
 package homeworks;
 
+import org.testng.annotations.Test;
+
 import java.util.ArrayList;
 
- class Calculator {
-    public int add(int a, int b) {
-        return a + b;
-    }
-}
-
 public class HomeworkPartTwo {
-    public static void main(String[] args) {
-        task1();
-        task2();
-        task3();
-        task4();
-        task5();
-    }
 
-    // 1. Calculator + add
-    public static void task1() {
-        Calculator calculator = new Calculator();
-        int result = calculator.add(5, 3);
-        System.out.println("Task 1: " + result);
-    }
-
-    // 2. Масив з 5 імен
-    public static void task2() {
+    @Test(description = "Масив з 5 імен")
+    public void task2() {
         String[] students = {"Ivan", "Oleg", "Anna", "Maria", "Sofia"};
 
         System.out.println("Task 2:");
@@ -34,8 +16,8 @@ public class HomeworkPartTwo {
         }
     }
 
-    // 3. ArrayList з містами
-    public static void task3() {
+    @Test(description = "ArrayList з містами")
+    public void task3() {
         ArrayList<String> cities = new ArrayList<>();
 
         cities.add("Kyiv");
@@ -46,8 +28,8 @@ public class HomeworkPartTwo {
         System.out.println("Task 3: " + cities);
     }
 
-    // 4. Метод ділення + try-catch
-    public static void task4() {
+    @Test(description = "Метод ділення + try-catch")
+    public void task4() {
         System.out.println("Task 4:");
         divide(10, 0);
     }
@@ -61,8 +43,8 @@ public class HomeworkPartTwo {
         }
     }
 
-    // 5. expected / actual
-    public static void task5() {
+    @Test(description = "expected / actual")
+    public void task5() {
         String expected = "Login successful";
         String actual = "Login successful";
 

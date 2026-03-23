@@ -2,7 +2,7 @@ package homeworks;
 import java.util.Scanner;
 
 
-public class homework_01_age {
+public class HomeworkPartOne {
     public static void main (String[] args) {
         Scanner scanner = new Scanner(System.in);
 

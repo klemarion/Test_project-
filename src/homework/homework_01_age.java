@@ -1,8 +1,8 @@
-package homeworks;
+package homework;
 import java.util.Scanner;
 
 
-public class HomeworkPartOne {
+public class homework_01_age {
     public static void main (String[] args) {
         Scanner scanner = new Scanner(System.in);
 

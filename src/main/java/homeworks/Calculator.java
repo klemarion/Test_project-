@@ -17,7 +17,7 @@ public class Calculator {
 
             System.out.print("Введіть друге число: ");
             double b = scanner.nextDouble();
-a
+            a
             double result;
 
             switch (operation) {
@@ -50,5 +50,3 @@ a
         }
     }
 }
-
-

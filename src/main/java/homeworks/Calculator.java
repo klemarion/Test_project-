@@ -2,17 +2,53 @@ package homeworks;
 
 import org.testng.annotations.Test;
 
+import java.util.Scanner;
+
 public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-    public int add(int a, int b) {
-        return a + b;
-    }
+        try {
+            System.out.print("Введіть перше число: ");
+            double a = scanner.nextDouble();
 
-    @Test(description = "Домашнє завдання - Створити калькулятор")
-    public static void task1() {
-        Calculator calculator = new Calculator();
-        int result = calculator.add(5, 3);
-        System.out.println("Task 1: " + result);
-        System.out.printf("тест");
+            System.out.print("Введіть операцію (+, -, *, /): ");
+            String operation = scanner.next();
+
+            System.out.print("Введіть друге число: ");
+            double b = scanner.nextDouble();
+a
+            double result;
+
+            switch (operation) {
+                case "+":
+                    result = a + b;
+                    System.out.println("Результат: " + result);
+                    break;
+                case "-":
+                    result = a - b;
+                    System.out.println("Результат: " + result);
+                    break;
+                case "*":
+                    result = a * b;
+                    System.out.println("Результат: " + result);
+                    break;
+                case "/":
+                    if (b == 0) {
+                        System.out.println("На нуль ділити не можна");
+                    } else {
+                        result = a / b;
+                        System.out.println("Результат: " + result);
+                    }
+                    break;
+                default:
+                    System.out.println("Невірна операція");
+            }
+
+        } catch (Exception e) {
+            System.out.println("Помилка: потрібно ввести число");
+        }
     }
 }
+
+

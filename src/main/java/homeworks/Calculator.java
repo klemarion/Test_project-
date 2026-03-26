@@ -13,5 +13,6 @@ public class Calculator {
         Calculator calculator = new Calculator();
         int result = calculator.add(5, 3);
         System.out.println("Task 1: " + result);
+        System.out.printf("тест");
     }
 }

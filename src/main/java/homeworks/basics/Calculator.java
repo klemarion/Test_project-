@@ -1,6 +1,4 @@
-package homeworks;
-
-import org.testng.annotations.Test;
+package homeworks.basics;
 
 import java.util.Scanner;
 
@@ -17,7 +15,7 @@ public class Calculator {
 
             System.out.print("Введіть друге число: ");
             double b = scanner.nextDouble();
-            a
+
             double result;
 
             switch (operation) {

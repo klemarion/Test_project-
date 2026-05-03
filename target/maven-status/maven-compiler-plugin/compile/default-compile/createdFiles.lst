@@ -1,4 +1,11 @@
-homeworks/Main.class
-homeworks/HomeworkPartTwo.class
-homeworks/Calculator.class
-homeworks/HomeworkPartOne.class
+homeworks/basics/Main$Admin.class
+homeworks/basics/Main$InvalidPriceException.class
+homeworks/basics/Main$Customer.class
+homeworks/basics/Main$User.class
+homeworks/basics/Product.class
+homeworks/basics/Main.class
+homeworks/basics/Collection.class
+homeworks/tests/LoginTest_locators.class
+homeworks/basics/Product$DiscountProduct.class
+homeworks/tests/LoginTests_Data_ProviderLocators.class
+homeworks/basics/Calculator.class

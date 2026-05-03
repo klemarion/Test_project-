@@ -5,8 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
-    private WebDriver driver;
+public class LoginPage extends BasePage{
 
     @FindBy(id="user-name")
     private WebElement usernameInput;
@@ -18,26 +17,34 @@ public class LoginPage {
     private WebElement loginButton;
 
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+        super(driver);
         }
 
-    public void enterUsername(String username) {
-        usernameInput.sendKeys(username);
+    public LoginPage enterUsername(String username) {
+        type(usernameInput, username);
+        return this;
     }
-    public void enterPassword(String password) {
-        passwordInput.sendKeys(password);
+    public LoginPage enterPassword(String password) {
+        type(passwordInput, password);
+        return this;
     }
-    public void clickLogin() {
-        loginButton.click();
+    public LoginPage clickLogin() {
+        click(loginButton);
+            return this;
     }
     public boolean isUsernameInputDisplayed() {
+        waitForVisibility(usernameInput);
         return usernameInput.isDisplayed();
     }
-
     public boolean isPasswordInputDisplayed() {
+        waitForVisibility(passwordInput);
         return passwordInput.isDisplayed();
     }
-
-
+    public boolean isLoginButtonDisplayed() {
+        waitForVisibility(loginButton);
+        return loginButton.isDisplayed();
+    }
+    public boolean isLoginPageOpened() {
+        return (isUsernameInputDisplayed() && isPasswordInputDisplayed() && isLoginButtonDisplayed());
+    }
 }
